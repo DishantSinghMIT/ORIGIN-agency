@@ -6,8 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  /* Black to dark orange gradient background */
-  background: linear-gradient(135deg, #111418, #d44912);
+  background: black;
   color: white;
   line-height: 1.6;
   transition: background 0.5s ease;
@@ -15,17 +14,17 @@ body {
 
 a {
   text-decoration: none;
-  color: #ff7b00; /* bright orange for links */
+  color: #d27d2d;
   transition: color 0.3s ease;
 }
 
 a:hover {
   color: #ffa533;
-  text-shadow: 0 0 8px #ffa533;
+  text-shadow: 0 0 8px #d27d2d;
 }
 
 .get-started {
-  background: linear-gradient(45deg, #d44912, #ff7b00);
+  background: linear-gradient(45deg, #d44912, #a96729);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
