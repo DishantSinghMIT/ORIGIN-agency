@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ORIGIN</title>
+  <link rel="stylesheet" href="contact.css" />
+ 
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-links");
+      toggleBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">ORIGIN</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="get-started">Get Started</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="contact-intro">
+      <h1>Contact Us</h1>
+      <p>We're here to help. Reach out to us for any inquiries or collaboration opportunities.</p>
+    </section>
+
+    <form class="contact-form">
+      <label>
+        Your Name
+        <input type="text" placeholder="Enter your name" required />
+      </label>
+      <label>
+        Your Email
+        <input type="email" placeholder="Enter your email" required />
+      </label>
+      <label>
+        Your Message
+        <textarea placeholder="Enter your message" required></textarea>
+      </label>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <section class="contact-info">
+      <h2>Connect with Us</h2>
+      <p>Email: contact@freelancerco.com</p>
+      <div class="social-icons">
+        <div class="social">
+          <div class="icon twitter"></div>
+          <p>Twitter</p>
+        </div>
+        <div class="social">
+          <div class="icon instagram"></div>
+          <p>Instagram</p>
+        </div>
+        <div class="social">
+          <div class="icon linkedin"></div>
+          <p>LinkedIn</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
