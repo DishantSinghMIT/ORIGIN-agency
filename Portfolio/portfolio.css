@@ -6,43 +6,93 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #111418;
+  /* Black to dark orange gradient background */
+  background: linear-gradient(135deg, #111418, #d44912);
   color: white;
   line-height: 1.6;
+  transition: background 0.5s ease;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ff7b00; /* bright orange for links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffa533;
+  text-shadow: 0 0 8px #ffa533;
 }
 
 .get-started {
-  background-color: #d44912;
+  background: linear-gradient(45deg, #d44912, #ff7b00);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(212, 73, 18, 0.7);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.get-started:hover {
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.9);
+  transform: scale(1.05);
 }
 
 .navbar {
-  background-color: #111418;
-  padding: 1rem;
+  background: linear-gradient(90deg, #111418, #2e1300);
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  box-shadow: 0 2px 8px rgba(212, 73, 18, 0.5);
+  z-index: 200;
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #ff7b00;
+  text-shadow: 0 0 6px #d44912;
+  letter-spacing: 1.5px;
+  animation: pulse 3s infinite alternate;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   align-items: center;
+}
+
+.nav-links a {
+  color: #ff7b00;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #ff7b00;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffa533;
+  text-shadow: 0 0 8px #ffa533;
 }
 
 .hamburger {
@@ -55,8 +105,14 @@ a {
 .hamburger span {
   height: 3px;
   width: 25px;
-  background-color: white;
+  background-color: #ff7b00;
   display: block;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger:hover span {
+  background-color: #ffa533;
 }
 
 @media (max-width: 768px) {
@@ -69,7 +125,7 @@ a {
     right: 20px;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(212, 73, 18, 0.8);
     z-index: 100;
   }
 
@@ -89,39 +145,69 @@ a {
 }
 
 .portfolio-intro h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: #ff7b00;
+  text-shadow: 0 0 10px #d44912;
+  animation: glowPulse 4s ease-in-out infinite;
 }
 
 .portfolio-intro p {
-  color: #9cabba;
+  color: #f2b880;
   margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .project-card {
   background-color: #1a1f25;
   padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(212, 73, 18, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.9);
 }
 
 .project-card h3 {
-  margin-bottom: 0.5rem;
-  color: #ffffff;
+  margin-bottom: 0.6rem;
+  color: #ffa533;
+  text-shadow: 0 0 5px #d44912;
 }
 
 .project-card p {
-  color: #9cabba;
-  font-size: 0.95rem;
+  color: #dba56c;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Animations */
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #d44912, 0 0 30px #ff7b00;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffa533, 0 0 40px #ff7b00;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #ff7b00;
+    text-shadow: 0 0 8px #d44912;
+  }
+  100% {
+    color: #ffa533;
+    text-shadow: 0 0 15px #ff7b00;
+  }
 }
