@@ -59,36 +59,20 @@ body {
   color: #cdd1d5;
 }
 
-.our-team .team-members {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
+.about-intro h1 {
+  color:#d44912; 
 }
 
-.member {
-  text-align: center;
-  max-width: 180px;
+.about-hero h1{
+  color:#d44912;
+} 
+
+.our-story h2{
+  color:#d44912;
 }
 
-.member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.member h4 {
-  margin: 8px 0 4px;
-  font-size: 16px;
-}
-
-.member p {
-  font-size: 14px;
-  color: #a3a3a3;
+.about-content h2 {
+  color:#d44912;
 }
 
 .values .value-cards {
@@ -107,7 +91,14 @@ body {
   background-color: #1a1f23;
   border-radius: 10px;
   border: 1px solid #2a2f33;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
+
+.value-cards .card:hover {
+  border: 1px solid #d44912;
+  box-shadow: 0 0 15px #d44912, 0 0 30px rgba(212, 73, 18, 0.3);
+}
+
 
 .card h3 {
   margin-bottom: 10px;
