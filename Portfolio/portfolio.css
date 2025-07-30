@@ -189,6 +189,10 @@ a:hover {
   line-height: 1.4;
 }
 
+img {
+  width: 350px;
+}
+
 /* Animations */
 
 @keyframes glowPulse {
