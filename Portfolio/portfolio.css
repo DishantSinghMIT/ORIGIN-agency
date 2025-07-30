@@ -193,6 +193,10 @@ img {
   width: 350px;
 }
 
+pre {
+  color:#d44912;
+}
+
 /* Animations */
 
 @keyframes glowPulse {
