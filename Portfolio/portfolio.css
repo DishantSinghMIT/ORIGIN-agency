@@ -208,26 +208,6 @@ a:hover {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #111418;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(212, 73, 18, 0.8);
-    z-index: 100;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-}
-
 .portfolio-container {
   padding: 2rem;
   max-width: 900px;
@@ -288,7 +268,6 @@ pre {
   color:#d44912;
 }
 
-/* Animations */
 
 @keyframes glowPulse {
   0%, 100% {
@@ -309,6 +288,7 @@ pre {
     text-shadow: 0 0 15px #ff7b00;
   }
 }
+
 
 
 
