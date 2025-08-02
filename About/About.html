@@ -8,20 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="icon" href="/LOGO.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-links");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      toggleBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        if (mobileMenu) {
-          mobileMenu.classList.toggle("open");
-        }
-      });
-    });
-  </script>
+  
 </head>
 
 <body>
@@ -131,7 +118,14 @@
       <p>&copy; ORIGIN. All rights reserved.</p>
     </footer>
   </div>
+
+    <script>
+    function toggleMobileMenu() {
+      document.getElementById("mobile-menu").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
+
 
 
