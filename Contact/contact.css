@@ -127,10 +127,69 @@ a {
   font-weight: bold;
 }
 
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 20px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.logo-section:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(var(--glow-primary));
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
 .nav-links a {
-  margin: 0 1rem;
-  font-weight: 500;
-  font-size: 0.95rem;
+  position: relative;
+  padding: 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+  background: var(--primary-light);
+  border-radius: 20px;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .get-started {
@@ -275,4 +334,5 @@ a {
  }
 
     }
+
 
