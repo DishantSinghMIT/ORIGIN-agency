@@ -36,6 +36,21 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.hamburger {
+  display: none;
+}
+
 .logo {
   font-size: 20px;
   font-weight: bold;
@@ -277,6 +292,7 @@ body {
   border-top: 1px solid #202427;
   margin-top: 60px;
 }
+
 
 
 
