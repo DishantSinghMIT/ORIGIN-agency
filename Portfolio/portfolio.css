@@ -104,14 +104,34 @@ a:hover {
 }
 
 .navbar {
-  background: linear-gradient(90deg, #111418, #2e1300);
-  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(212, 73, 18, 0.5);
-  z-index: 200;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.navbar:hover::before {
+  opacity: 1;
 }
 
 .logo {
@@ -281,4 +301,5 @@ pre {
     text-shadow: 0 0 15px #ff7b00;
   }
 }
+
 
