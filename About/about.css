@@ -41,10 +41,71 @@ body {
   font-weight: bold;
 }
 
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 20px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.logo-section:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(var(--glow-primary));
+}
+
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
+
+.nav-links a {
+  position: relative;
+  padding: 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+  background: var(--primary-light);
+  border-radius: 20px;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 
 .mobile-menu {
   position: fixed;
@@ -109,11 +170,6 @@ body {
   border-radius: 2px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
 
 .get-started {
   background-color: #d44912;
@@ -221,43 +277,6 @@ body {
   margin-top: 60px;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
 
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background-color: #fff;
-      display: block;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #111418;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .hamburger {
-        display: flex;
-      }
-
-    }
 
