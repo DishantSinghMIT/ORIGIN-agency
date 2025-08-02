@@ -92,12 +92,14 @@
   </main>
 
     <script>
-    function toggleMobileMenu() {
-      document.getElementById("mobile-menu").classList.toggle("open");
-    }
+    function toggleMobileMenu(button) {
+  document.getElementById("mobile-menu").classList.toggle("open");
+  button.classList.toggle("active");
+}
   </script>
 </body>
 </html>
+
 
 
 
