@@ -543,6 +543,11 @@ h1, h2, h3 {
   position: relative;
 }
 
+.wwo {
+  text-align: center;
+  color:#d44912;
+}
+
 .contact input,
 .contact textarea {
   background: var(--card-bg);
