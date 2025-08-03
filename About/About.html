@@ -8,19 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="icon" href="/LOGO.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-links");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      toggleBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        if (mobileMenu) {
-          mobileMenu.classList.toggle("open");
-        }
-      });
-    });
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById("mobile-menu").classList.toggle("open");
+    }
   </script>
 </head>
 
@@ -28,20 +19,40 @@
   <div class="container">
     <header class="navbar">
       <div class="logo-section">
-        <img src="/LOGO.png" width="50px" height="50px" />
+        <svg viewBox="0 0 48 48"><path d="M39.5563...Z" fill="currentColor"></path></svg>
+        <img src="/LOGO.png" width="50px" height="50px">
         <h2>ORIGIN</h2>
       </div>
       <nav class="nav-links">
         <a href="../index.html">Home</a>
         <a href="#">About</a>
-        <a href="/Portfolio/Portfolio.html">Portfolio</a>
-        <a href="/Contact/contact.html">Contact</a>
-        <a href="/Contact/contact.html" class="get-started">Get Started</a>
+        <a href="../Portfolio/Portfolio.html">Portfolio</a>
+        <a href="../Contact/contact.html">Contact</a>
       </nav>
-      <div class="hamburger">
+      <div class="profile-pic"></div>
+      <button class="hamburger" onclick="toggleMobileMenu()">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-header">
+        <div class="logo-section">
+          <svg viewBox="0 0 48 48"><path d="M39.5563...Z" fill="currentColor"></path></svg>
+          <h2>ORIGIN</h2>
+        </div>
+        <button class="hamburger active" onclick="toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-links">
+        <a href="../index.html">Home</a>
+        <a href="#">About</a>
+        <a href="../Portfolio/Portfolio.html">Portfolio</a>
+        <a href="../Contact/contact.html">Contact</a>
+        <div class="mobile-logo"></div>
+      </div>
+    </div>
 
     <main class="about-container">
      
@@ -97,7 +108,7 @@
       <section class="cta">
         <h2>Think We’d Be a Good Match?</h2>
         <p>Whether you’ve got an idea, a sketch, or anything you would like to share — contact us and we’ll bring it to life.</p>
-        <a href="contact.html" class="btn">Contact Us</a>
+        <a href="/Contact/contact.html" class="btn">Contact Us</a>
       </section>
     </main>
     <footer class="footer">

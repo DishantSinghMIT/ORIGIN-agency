@@ -6,35 +6,50 @@
   <title>Contact | ORIGIN</title>
   <link rel="stylesheet" href="contact.css" />
  
-  <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-links");
-      toggleBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-    });
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById("mobile-menu").classList.toggle("open");
+    }
   </script>
 </head>
 <body>
   <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">ORIGIN</div>
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="/About/About.html">About</a>
-        <a href="/Portfolio/Portfolio.html">Portfolio</a>
-        <a href="#">Contact</a>
-        <a href="#" class="get-started">Get Started</a>
-      </nav>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="logo-section">
+      <svg viewBox="0 0 48 48"><path d="M39.5563...Z" fill="currentColor"></path></svg>
+      <img src="/LOGO.png" width="50px" height="50px">
+      <h2>ORIGIN</h2>
     </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About/About.html">About</a>
+      <a href="Portfolio/Portfolio.html">Portfolio</a>
+      <a href="Contact/contact.html">Contact</a>
+    </nav>
+    <div class="profile-pic"></div>
+    <button class="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-header">
+      <div class="logo-section">
+        <svg viewBox="0 0 48 48"><path d="M39.5563...Z" fill="currentColor"></path></svg>
+        <h2>ORIGIN</h2>
+      </div>
+      <button class="hamburger active" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">Home</a>
+      <a href="About/About.html">About</a>
+      <a href="Portfolio/Portfolio.html">Portfolio</a>
+      <a href="Contact/contact.html">Contact</a>
+      <div class="mobile-logo"></div>
+    </div>
+  </div>
+  
   <main class="container contact-page">
     <section class="contact-intro">
       <h1>Contact Us</h1>
