@@ -49,28 +49,31 @@
       <div class="mobile-logo"></div>
     </div>
   </div>
-  
+
   <main class="container contact-page">
     <section class="contact-intro">
       <h1>Contact Us</h1>
       <p>We're here to help. Reach out to us for any inquiries or collaboration opportunities.</p>
     </section>
 
-    <form class="contact-form">
+    <form class="contact-form" action="https://formspree.io/f/meozllww" method="POST">
       <label>
         Your Name
-        <input type="text" placeholder="Enter your name" required />
+        <input type="text" name="name" placeholder="Enter your name" required />
       </label>
       <label>
         Your Email
-        <input type="email" placeholder="Enter your email" required />
+        <input type="email" name="_replyto" placeholder="Enter your email" required />
       </label>
       <label>
         Your Message
-        <textarea placeholder="Enter your message" required></textarea>
+        <textarea name="message" placeholder="Enter your message" required></textarea>
       </label>
+      <!-- optional: honeypot to deter bots -->
+      <input type="text" name="_gotcha" style="display:none" />
       <button type="submit" class="btn">Send Message</button>
     </form>
+    
 
     <section class="contact-info">
       <h2>Connect with Us</h2>
