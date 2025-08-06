@@ -1028,4 +1028,11 @@ h1, h2, h3 {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     z-index: 100;
   }
+
+.btn {
+  color: #d44912;
+  background-color: #000000;
+  border-radius: 20px;
+  border: #000000;
+}
     }
