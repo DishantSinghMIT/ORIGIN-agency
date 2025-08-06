@@ -51,6 +51,21 @@ body {
   background: var(--border-hover);
 }
 
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
 a {
   text-decoration: none;
   color: var(--light-text);
@@ -1036,4 +1051,5 @@ h1, h2, h3 {
   border: #000000;
 }
     }
+
 
