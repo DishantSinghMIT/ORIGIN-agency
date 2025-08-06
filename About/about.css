@@ -109,6 +109,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
+
 .logo-section {
   display: flex;
   align-items: center;
@@ -1052,3 +1053,4 @@ h1, h2, h3 {
         display: flex;
       }
     }
+
